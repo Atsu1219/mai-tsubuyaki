@@ -1,0 +1,10 @@
+main li {
+    width: 500px;
+    padding: 0 25px;
+    margin-top: 10px;
+    border-bottom: 1px solid #303030;
+}
+
+.name {
+    font-weight: bold;
+}

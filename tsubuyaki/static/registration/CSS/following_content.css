@@ -1,0 +1,73 @@
+.content {
+    border-bottom: 1px solid #303030;
+    width: 500px;
+}
+
+.content p {
+    width: 450px;
+    line-height: 1.1;
+    overflow-wrap: break-word;
+}
+
+.msg {
+    margin-bottom: 10px;
+}
+
+.share-content {
+    width: 425px;
+    border: 1px solid #303030;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.share-section {
+    width: 400px;
+    margin: 7px auto;
+}
+
+img {
+    width: 425px;
+    height: 239px;
+    object-fit: cover; 
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 10px
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin: 10px auto;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.name:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+}
+
+.action {
+    display: flex;
+    margin-left: auto;
+}
+
+.action a {
+    margin-left: 5px;
+}
+
+.action button:hover {
+    color: #ffbf1f;
+}
+
+.good button:hover {
+    color: #ff006f;
+}
+
+.share button:hover {
+    color: #d2d200;
+}

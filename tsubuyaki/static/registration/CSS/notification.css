@@ -1,0 +1,21 @@
+.content {
+    border-bottom: 1px solid #303030;
+}
+
+section {
+    width: 450px;
+    margin: 10px auto;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.name:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+}
+
+.msg {
+    color: #afafaf;
+}

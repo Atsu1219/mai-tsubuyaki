@@ -1,0 +1,49 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block title %}リスト/Tsubuyaki{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'registration/CSS/following_content.css' %}">{% endblock %}
+
+{% block mypage %}<li><a href="{% url 'user' user %}">マイページ</a></li>{% endblock %}
+
+{% block header_title %}
+<a href="{% url 'logout' %}">logout</a>
+{% endblock %}
+
+{% block content %}
+{% for item in content %}
+<div class="content">
+    <section>
+        <a href="{% url 'user' item.user %}" class="name">{{ item.user }}</a>
+        <p class="msg">{{ item.content }}</p>
+        {% if item.picture %}
+        <img src="{{ item.picture.url }}">
+        {% endif %}
+        {% if item.share_content %}
+        <div class="share-content">
+            <div class="share-section">
+                <a href="{% url 'user' item.share_user %}" class="name">{{ item.share_user }}</a>
+                <p>{{ item.share_content }}</p>
+            </div>
+        </div>
+        {% endif %}
+        <div class="action">
+            <div class="good">
+                <a href="{% url 'good' item.id %}"><button>♡{{ item.good_count }}</button></a>
+            </div>
+            {% if share %}
+            <div class="share">
+                <a href="{% url 'index' %}"><button>↺{{ item.share_count }}</button></a>
+            </div>
+            {% else %}
+            <div class="share">
+                <a href="{% url 'share' item.id %}"><button>↺{{ item.share_count }}</button></a>
+            </div>
+            {% endif %}
+            <a href="{% url 'delete' item.id %}"><button>削除</button></a>
+        </div>
+    </section>
+</div>
+{% endfor %}
+{% endblock %}

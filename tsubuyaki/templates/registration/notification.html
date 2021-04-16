@@ -1,0 +1,34 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block title %}通知/Tsubuyaki{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'registration/CSS/notification.css' %}">{% endblock %}
+
+{% block mypage %}<li><a href="{% url 'user' user %}">マイページ</a></li>{% endblock %}
+
+{% block content %}
+{% for item in notification %}
+{% if item.action == 'follow' %}
+<div class="content">
+    <section>
+        <p><a href="{% url 'user' item.owner %}" class="name">{{item.owner}}</a>さんにフォローされました</p>
+    </section>
+</div>
+{% elif item.action == 'good' %}
+<div class="content">
+    <section>
+        <p><a href="{% url 'user' item.owner %}" class="name">{{item.owner}}</a>さんがあなたのつぶやきををいいねしました</p>
+        <p class="msg">{{item.content}}</p>
+    </section>
+</div>
+{% else %}
+<div class="content">
+    <section>
+        <p><a href="{% url 'user' item.owner %}" class="name">{{item.owner}}</a>さんがあなたのつぶやきをシェアしました</p>
+        <p class="msg">{{item.content}}</p>
+    </section>
+</div>
+{% endif %}
+{% endfor %}
+{% endblock %}

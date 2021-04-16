@@ -1,0 +1,16 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block title %}フォロワー/Tsubuyaki{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'registration/CSS/follower.css' %}">{% endblock %}
+
+{% block mypage %}<li><a href="{% url 'user' user %}">マイページ</a></li>{% endblock %}
+
+{% block content %}
+<ul>
+    {% for user in follower %}
+    <li><a href="{% url 'user' user.owner %}">{{ user.owner }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

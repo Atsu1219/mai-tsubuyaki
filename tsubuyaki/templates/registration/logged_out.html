@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='ja'>
+
+  <head>
+    <meta charset="utf-8">
+    <title>「いま」を共有しよう/Tsubuyaki</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="{% static 'registration/CSS/logged_out.css' %}">
+  </head>
+
+  <body>
+    <div class="bg"></div>
+    <main>
+        <h1>いまこの瞬間が、集う。</h1>
+        <h2>Tsubuyakiをはじめよう</h2>
+        <button>
+            <a href="{% url 'signup' %}" class="signup">新規登録</a>
+            <a href="{% url 'login' %}" class="login">ログイン</a>
+        </button>
+    </main>
+  </body>
+</html>

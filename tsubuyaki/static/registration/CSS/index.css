@@ -1,0 +1,133 @@
+.empty {
+    height: 10px;
+    background-color: #252525;
+    border-bottom: 1px solid #303030;
+}
+
+textarea {
+    height: 150px;
+    width: 500px;
+    color: #ffffff;
+    padding: 10px;
+}
+
+textarea:focus, button:focus {
+    outline: none;
+}
+
+form {
+    border-bottom: 1px solid #303030;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    margin: auto auto;
+}
+
+.form-add input {
+    display: none;
+}
+
+.form-add label {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.form-add label:hover {
+    color: #ff006f;
+}
+
+button {
+    color: #ffffff;
+}
+
+.form-add button {
+    padding: 3px 20px;
+    font-weight: bold;
+    background-color: #ff006f;
+    border-radius: 15px;
+}
+
+.form-add button:hover {
+    background-color: #ff7fb7;
+}
+
+.content {
+    border-bottom: 1px solid #303030;
+    width: 500px;
+}
+
+.content p {
+    width: 450px;
+    line-height: 1.1;
+    overflow-wrap: break-word;
+}
+
+.msg {
+    margin-bottom: 10px;
+}
+
+.share-content {
+    width: 425px;
+    border: 1px solid #303030;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.share-section {
+    width: 400px;
+    margin: 7px auto;
+}
+
+img {
+    width: 425px;
+    height: 239px;
+    object-fit: cover; 
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 10px
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin: 10px auto;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.name:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+}
+
+.action {
+    display: flex;
+    margin-left: auto;
+}
+
+.action a {
+    margin-left: 5px;
+}
+
+.action button:hover {
+    color: #ffbf1f;
+}
+
+.good button:hover {
+    color: #ff006f;
+}
+
+.share button:hover {
+    color: #d2d200;
+}

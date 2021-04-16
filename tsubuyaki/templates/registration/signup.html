@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='ja'>
+
+  <head>
+    <meta charset="utf-8">
+    <title>新規登録/Tsubuyaki</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="{% static 'registration/CSS/signup.css' %}">
+  </head>
+
+  <body>
+    <main>
+        <h1>新規登録</h1>
+        <form action="{% url 'signup' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button>新規登録</button>
+        </form>
+        <div class="login"><a href="{% url 'login' %}">ログイン</a></div>
+    </main>
+  </body>
+</html>

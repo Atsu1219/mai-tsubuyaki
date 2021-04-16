@@ -1,0 +1,16 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block title %}フォロー/Tsubuyaki{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'registration/CSS/following.css' %}">{% endblock %}
+
+{% block mypage %}<li><a href="{% url 'user' user %}">マイページ</a></li>{% endblock %}
+
+{% block content %}
+<ul>
+    {% for user in following %}
+    <li><a class="name" href="{% url 'user' user.follow_user %}">{{ user.follow_user }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
